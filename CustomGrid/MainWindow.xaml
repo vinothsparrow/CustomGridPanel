@@ -1,0 +1,36 @@
+﻿<Window x:Class="CustomGrid.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:CustomGrid"
+        Title="Custom GridPanel" Height="350" Width="525">
+    <Grid>
+        <local:MyGrid>
+            <local:MyGrid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+            </local:MyGrid.RowDefinitions>
+            <local:MyGrid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="100*"/>
+                <ColumnDefinition Width="300*"/>
+            </local:MyGrid.ColumnDefinitions>
+            <Button local:MyGrid.ColumnSpan="2" local:MyGrid.RowSpan="2">0,0</Button>
+            <!--<Button local:MyGrid.Row="1">0,1</Button>-->
+            <!--<Button local:MyGrid.Column="1">1,0</Button>-->
+            <Button local:MyGrid.Column="2">2,0</Button>
+            <!--<Button local:MyGrid.Column="1" local:MyGrid.Row="1">1,1</Button>-->
+            <Button local:MyGrid.Column="1" local:MyGrid.Row="2">1,2</Button>
+            <Button local:MyGrid.Column="2" local:MyGrid.Row="1">2,1</Button>
+            <Button local:MyGrid.Column="0" local:MyGrid.Row="2">0,2</Button>
+            <Button local:MyGrid.Column="2" local:MyGrid.Row="2">2,2</Button>
+            <!--<local:MyGrid.RowDefinitions>
+                <RowDefinition/>
+            </local:MyGrid.RowDefinitions>
+            <local:MyGrid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </local:MyGrid.ColumnDefinitions>
+            <Button/>-->
+        </local:MyGrid>
+    </Grid>
+</Window>
